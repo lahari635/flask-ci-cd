@@ -1,44 +1,26 @@
 # Flask CI/CD Pipeline
 
-A containerized Flask application with a GitHub Actions CI/CD workflow.
+## Project Description
 
-## Project Structure
+This project demonstrates a CI/CD pipeline for a containerized Flask
+application using GitHub Actions and Docker.
 
-- `app.py` - Flask application
-- `requirements.txt` - Python dependencies
-- `Dockerfile` - Docker image configuration
-- `.github/workflows/ci-cd.yml` - GitHub Actions workflow
+The pipeline automatically tests the Flask application, builds a Docker
+image, and pushes the image to Docker Hub whenever changes are pushed
+to the main branch.
 
-## Pipeline
+## Technologies Used
 
-GitHub Push -> Test -> Build Docker Image -> Push to Docker Hub
+- Python
+- Flask
+- Docker
+- GitHub Actions
+- Docker Hub
 
-## Run Locally
+## Application
 
-```bash
-pip install -r requirements.txt
-python app.py
-```
+The Flask application provides a simple home page and health-check endpoint.
 
-Open http://localhost:5000
+## Author
 
-## Docker
-
-Build:
-
-```bash
-docker build -t flask-cicd .
-```
-
-Run:
-
-```bash
-docker run -p 5000:5000 flask-cicd
-```
-
-## GitHub Secrets
-
-Add these repository secrets before running the workflow:
-
-- `DOCKER_USERNAME`
-- `DOCKER_PASSWORD`
+Lahari
